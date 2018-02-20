@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "api/base.html" %}
+  {% block body_block %}
+
+    <h1>Welcome to sign up page!</h1>
+    <h2>Please fill out the form below: </h2>
+
+    <form method="POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" class="btn btn-primary" value="Submit">
+
+  {% endblock %}
